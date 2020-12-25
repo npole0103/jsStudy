@@ -77,8 +77,85 @@ document.querySelector('body').style.color='white';
 
 boolean : true / false
 
- 
+ ``` html
+    <br>
+    중복의 제거 / 리펙토링
+    <br>
 
+    <input id='night_day'type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night')
+    {
+    target.style.backgroundColor='black';
+    target.style.color='white';
+    this.value = 'day';
+    }
+    else
+    {
+    target.style.backgroundColor='white';
+    target.style.color='black';
+    this.value = 'night';
+    }
+    ">
+
+ ```
+
+### Loop & Array
+
+``` html
+
+    <h1>Array</h1>
+    <h2>Syntax</h2>
+    <script>
+        var coworkes = ["suheon", "hi"];
+    </script>
+    <h2>get</h2>
+    <script>
+        document.write(coworkes[0]);
+        document.write(coworkes[1]);
+    </script>
+
+    <h2>Add</h2>
+    <script>
+        coworkes.push('duru');
+        coworkes.push('taeho');
+    </script>
+
+    <h2>Count</h2>
+    <script>
+        document.write(coworkes.length);
+    </script>
+
+
+
+
+        <script>
+            document.write('<li>1</li>');
+            var i = 0;
+            while (i < 3) {
+                document.write('<li>2</li>');
+                document.write('<li>3</li>');
+                i++;
+            }
+            document.write('<li>4</li>');
+        </script>
+
+
+
+        <script>
+            var coworkers = ["suheon", "leezche", "duru", "taeho"];
+            var i = 0;
+            while(i < coworkers.length)
+            {
+                document.write('<li>' + coworkers[i] + '</li>');
+                document.write('<li><a href= "https://a.com/` + coworkers[i] + ` "> ' + coworkers[i] + '</a></li>');
+                i = i + 1;
+            }
+        </script>
+
+```
+
+큰 따옴표와 작은 따옴표를 를 잘 활용해서 코드를 짜야함.
 
 
 
@@ -96,5 +173,8 @@ F12 - console 에서 자바스크립트 실행가능
 함수는 포괄적인 개념이고 메소드는 객체를 구성하는 함수 중에 미리 내장된 함수를 뜻한다.
 
 자바스크립트는 컴퓨터 언어이면서 프로그래밍 언어이다.
+
+`<script></script>`태그 사용시 만약 두 개의 스크립트 태그를 사용한다면,
+위쪽 스크립트에서 선언한 변수를 아래쪽 스크립트 태그에서 사용할 수 있다.
 
 

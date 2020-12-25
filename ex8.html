@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loop & Array</h1>
+    <h2>Co workers</h2>
+    <ul>
+        <li>suheon</li>
+        <li>leezche</li>
+        <li>duru</li>
+        <li>teaho</li>
+    </ul>
+
+    <ul>
+        <script>
+            var coworkers = ["suheon", "leezche", "duru", "taeho"];
+            var i = 0;
+            while(i < coworkers.length)
+            {
+                document.write('<li>' + coworkers[i] + '</li>');
+                document.write('<li><a href= "https://a.com/` + coworkers[i] + ` "> ' + coworkers[i] + '</a></li>');
+                i = i + 1;
+            }
+        </script>
+    </ul>
+
+</body>
+</html>

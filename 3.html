@@ -17,6 +17,8 @@
     document.querySelector('body').style.backgroundColor='white';
     document.querySelector('body').style.color='black';
     ">
+    <br>
+
 
     <input id='night_day'type="button" value="night" onclick="
     if(document.querySelector('#night_day').value === 'night')
@@ -58,6 +60,27 @@
         Writing objects: 100% (5/5), 608 bytes | 304.00 KiB/s, done.
         Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
     </p>
+
+
+    <br>
+    중복의 제거 / 리펙토링
+    <br>
+
+    <input id='night_day'type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night')
+    {
+    target.style.backgroundColor='black';
+    target.style.color='white';
+    this.value = 'day';
+    }
+    else
+    {
+    target.style.backgroundColor='white';
+    target.style.color='black';
+    this.value = 'night';
+    }
+    ">
 
 </body>
 
