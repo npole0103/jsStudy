@@ -60,11 +60,29 @@ var 변수 / const 상수
 
 ---
 
+버튼을 누르면 body 요소에 있는 배경과 글자색을 바꿔주는 코드.
+``` html
+<input type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+">
+```
+
+---
+### 조건문
+
+토글 : 하나의 설정 값으로부터 다른 값으로 전환하는 것.
+
+`===` : equal 연산자. 반환값은 true와 false이다.
+
+boolean : true / false
+
+ 
 
 
 
 
-
+---
 ## etc
 
 자바 스크립트는 사용자와 상호작용하는 언어이다.
@@ -77,5 +95,6 @@ F12 - console 에서 자바스크립트 실행가능
 
 함수는 포괄적인 개념이고 메소드는 객체를 구성하는 함수 중에 미리 내장된 함수를 뜻한다.
 
+자바스크립트는 컴퓨터 언어이면서 프로그래밍 언어이다.
 
 

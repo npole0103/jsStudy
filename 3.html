@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <title>SUHEON - JAVASCRIPT</title>
     <meta charset="utf-8">
@@ -17,28 +18,47 @@
     document.querySelector('body').style.color='black';
     ">
 
+    <input id='night_day'type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value === 'night')
+    {
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('#night_day').value = 'day';
+    }
+    else
+    {
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    document.querySelector('#night_day').value = 'night';
+    }
+    
+    ">
+
     <ol>
         <li><a href="1.html">HTML</a></li>
         <li><a href="2.html">CSS</a></li>
         <li><a href="3.html">JAVASCRIPT</a></li>
     </ol>
 
-    <h2>JAVASCRIPT <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=javascript" target="_blank" title="html define">JAVASCRIPT</a> 정의란 무엇인가</h2>
+    <h2>JAVASCRIPT <a
+            href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=javascript"
+            target="_blank" title="html define">JAVASCRIPT</a> 정의란 무엇인가</h2>
 
     <strong>Hypertext <u>Markup</u> Language </strong>
 
     <br><br>
     <p>
-    Enumerating objects: 7, done.
-    Counting objects: 100% (7/7), done.
-    Delta compression using up to 8 threads
+        Enumerating objects: 7, done.
+        Counting objects: 100% (7/7), done.
+        Delta compression using up to 8 threads
     </p>
 
     <p style="margin-top:100px;">
-    Compressing objects: 100% (5/5), done.
-    Writing objects: 100% (5/5), 608 bytes | 304.00 KiB/s, done.
-    Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+        Compressing objects: 100% (5/5), done.
+        Writing objects: 100% (5/5), 608 bytes | 304.00 KiB/s, done.
+        Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
     </p>
 
-</body> 
+</body>
+
 </html>
