@@ -193,9 +193,42 @@ boolean : true / false
 
 ```
 
+CPP과 별 다른 점은 없지만 굳이 다른 점을 찾아보자면 파라미터를 전달할 때 자료형을 쓰지 않는다는 것이다.
 
+---
 
+### 객체
 
+배열은 대괄호로 정의하지만 객체는 `var coworkers = {};`처럼 중괄호로 정의한다.
+
+오브젝트 리터럴 `{ }`
+
+오브젝트 엑세스 오퍼레이터 `.`
+
+``` html
+    <script>
+        var coworkers = {
+            "programmer":"suheon",
+            "designer":"leezche"
+        };
+        document.write("programmer : "+coworkers.programmer + "<br>");
+        document.write("designer : "+coworkers.designer + "<br>");
+        coworkers.bookeepper = "duru";
+        document.write("bookkeeper : "+coworkers.bookeepper + "<br>");
+        coworkers['data scientist'] = "taeho";
+        document.write("data scientist : "+coworkers['data scientist'] + "<br>");
+
+        for(var key in coworkers) // coworkers 오브젝트 안에 있는 key 값을 순회
+        {
+            document.write(key + ' : ' + coworkers[key]+'<br>');
+        }
+    </script>
+```
+공백이 있는 정보를 넣을 때는 `객체이름['abc def]` 이런식으로 표현한다.
+
+객체 내에 존재하는 변수 : Property
+
+객체 내에 존재하는 함수 : Method
 
 
 ---
