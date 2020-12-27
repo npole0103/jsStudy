@@ -157,6 +157,45 @@ boolean : true / false
 
 큰 따옴표와 작은 따옴표를 를 잘 활용해서 코드를 짜야함.
 
+---
+
+### 함수
+
+사용법 : function 함수이름() { }
+
+``` html
+
+    <h2>Parameter & Argument</h2>
+    <script>
+        function onePlusOne()
+        {
+            document.write(1+1+'<br>');
+        }
+        onePlusOne();
+
+        function sum(left, right)
+        {
+            document.write(left + right + '<br>');
+        }
+        sum(2,3);
+        sum(3,4);
+    </script>
+    <h2>Return</h2>
+    <script>
+        function sum2(left, right)
+        {
+            return left+right;
+        }
+        document.write(sum2(2,3)+'<br>');
+        document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+        document.write('<div style="font-size:3rem">'+sum2(2,3)+'</div>');
+    </script>
+
+```
+
+
+
+
 
 
 ---
