@@ -41,6 +41,10 @@ String : 텍스트 데이터 나타낼 때 사용.
 
 Symbol : 유일하고 변경 불가능한 값.
 
+`A == B` : 숫자형이든 문자형이든 상관 않고 true로 반환. 10 == "10" True
+
+`A === B` : 표기된 숫자와 더불어 자료형 까지 일치해야 true를 반환함.
+
 ---
 
 ### string method
@@ -57,6 +61,7 @@ Symbol : 유일하고 변경 불가능한 값.
 var 변수 / const 상수
 
 `var name = 'suheon';`  가급 적이면 var을 앞에 붙이기.
+
 
 ---
 
@@ -229,6 +234,29 @@ CPP과 별 다른 점은 없지만 굳이 다른 점을 찾아보자면 파라�
 객체 내에 존재하는 변수 : Property
 
 객체 내에 존재하는 함수 : Method
+
+이런 방법으로도 객체 생성 가능
+
+``` html
+    <script>
+        var tv = new Object();
+        tv.color = "white";
+        tv.price = "300000";
+        tv.info = function()
+        {
+            document.write("tv 색상: "+ this.color, "<br>");
+            document.write("tv 가격: "+ this.price, "<br>");
+        }
+    </script>
+```
+
+Date 객체 : 날짜 정보를 다루는 객체이다.
+
+Math 객체 : 수학과 관련된 메서드를 다루는 객체. 하위 메소드로는 max, min, pow, random 등등이 있다.
+
+[Array 객체](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+[String 객체](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String#Methods)
 
 
 ---
