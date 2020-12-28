@@ -2,11 +2,13 @@
         var Body = { // Body 객체 생성
             setColor : function (color) //메소드
             {
-                document.querySelector('body').style.color = color;
+                // document.querySelector('body').style.color = color;
+                $('body').css('color', color);
             },
             setBgColor : function (color) //메소드
             {
-                document.querySelector('body').style.backgroundColor = color;
+                // document.querySelector('body').style.backgroundColor = color;
+                $('body').css('backgroundColor', color);
             }
     
             };
@@ -14,12 +16,13 @@
             var Links = { //Links 객체 생성
                 setColor : function (color) //메소드
                 {
-                    var alist = document.querySelectorAll('a');
-                        var i = 0;
-                        while (i < alist.length) {
-                            alist[i].style.color = color;
-                            i = i + 1;
-                        }
+                    // var alist = document.querySelectorAll('a');
+                    //     var i = 0;
+                    //     while (i < alist.length) {
+                    //         alist[i].style.color = color;
+                    //         i = i + 1;
+                    //     }
+                    $('a').css('color', color);
                 }
             };
     
