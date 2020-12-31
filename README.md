@@ -258,6 +258,16 @@ Math 객체 : 수학과 관련된 메서드를 다루는 객체. 하위 메소�
 
 [String 객체](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String#Methods)
 
+브라우저 객체 : 브라우저에 내장된 객체.
+
+window : 최상위 객체
+
+doucment, screen, loaction, history, navigator : window의 하위 객체
+
+body, div, img, a, form, input : document의 하위 객체
+
+
+
 
 ---
 ## etc
