@@ -266,6 +266,35 @@ doucment, screen, loaction, history, navigator : window의 하위 객체
 
 body, div, img, a, form, input : document의 하위 객체
 
+``` html
+    <script>
+        alert("경고 메시지");
+        prompt("질의내용", "기본 답변");
+        confirm("질의 내용"); //확인 클릭시 true 취소 클릭시 false 반환
+    </script>
+```
+
+setInterval
+
+`var auto = setInterval( function(){ } ,1000);` 1초마다 함수 내용 반복 실행
+
+`clearInterval(auto);` auto가 참조하는 setInterval 기능 제거
+
+setTimeout
+
+`var tim = setTimeout( function(){ }, 1000);` 1초 후에 코드를 한번 실행하고 종료
+
+`clearTimeout(tim);` tim이 참조하는 setTimeout 기능 제거
+
+screen 객체 : width, height 등을 속성으로 갖고 있음. 반환 값 받을 수 있음.
+
+location 객체 : 사용자 브라우저와 관련된 속성과 메소드를 제공함. 현재 URL에 대한 정보(속성)와 새로 고침(reload) 메소드 제공. ex) 경로값 가져오기, 브라우저 새로고침하기, 주소 변경하기
+
+history 객체 : history 객체는 사용자가 방문한 사이트의 기록을 남기고 이전 방문 사이트와 다음 방문 사이트로 다시 돌아갈 수 있는 속성과 메소드를 제공함. history.back(), history.foward(), history.length : 방문 기록에 저장된 목록의 갯수 반환
+
+navigator 객체 : 현재 방문자가 사용하는 브라우저 정보와 운영체제 정보를 제공하는 객체.
+
+
 
 
 
