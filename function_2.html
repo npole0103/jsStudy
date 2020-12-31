@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var color = ["white", "yellow", "aqua", "purple"]; // color 배열 선언 및 정의
+
+        var i = 0;
+        function changeColor(){
+            i++;
+            if(i >= color.length) //길이보다 i값이 초과하면 i = 0;
+                i = 0;
+
+            var bodyTag = document.getElementById("theBody");
+            bodyTag.style.backgroundColor = color[i];
+        }
+    </script>
+
+</head>
+<body id="theBody">
+    <button onclick="changeColor();">배경색 바꾸기</button>
+</body>
+</html>
