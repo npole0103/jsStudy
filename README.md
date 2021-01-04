@@ -294,11 +294,91 @@ history 객체 : history 객체는 사용자가 방문한 사이트의 기록을
 
 navigator 객체 : 현재 방문자가 사용하는 브라우저 정보와 운영체제 정보를 제공하는 객체.
 
+전역 변수/지역 변수 똑같이 존재.
+
+
+### 제이쿼리
+
+``` html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+```
+
+모질라 사의 자바스크립트 개발자였던 존 레식이 자바스크립트를 이용해 만든 라이브러리 언어.
+
+**장점**
+- 호환성 문제 해결 
+- 쉽고 편리한 애니메이션 효과 기능 구현.
+
+**문서 객체 모델**
+html, head, body, title, meta, img, h1, 등등
+
+선택자 기본형
+1. 선택자 요서에 지정한 스타일을 적용.
+`$("CSS 선택자").css("스타일 속성명", "값");`
+2. 선택한 요소에 지정한 속성을 적용.
+`$("CSS 선택자").attr("속성명", "값");`
 
 
 
+**★인접 관계 선택자★**
+``` html
+<body>
+    <div id="wrap"> a -------------- a는 c의 상위(closet) 요소
+        <div id="inner_wrap"> b----------b는 c의 부모(parent) 요소
+            c--------------c는 b의 자식(children) 요소
+            <h1>제목1</h1> d ------------- d는 e의 형(prev) 요소
+            <h2>제목2</h2> e --------------e는 f의 동생(next) 요소
+            <p>내용1</p> f
+            ---------------c
+    ....
+    ....
 
+    jQuery를 사용한 모든 웹 페이지는 이렇게 시작함.
+    <script>
+        $(document).ready(function() {
+            내용;
+        });
+    </script>
 
+    이를 간략하게 표현하면 다음과 같음
+    <script>
+        $(function() {
+
+        });
+    </script>
+
+    
+
+    <script>
+        $("요소 선택자").parent().css("border", "2px dashed #f00");
+        이런식으로 적으면 부모 요소에 적용
+
+        var style_2 = {
+            "background-color":"#ff0",
+            "border":"2px dashed #f00"
+        }
+        $("요소 선택자").next().next().css(style_2);
+        이런식으로 변수를 통해 형제 요소에 적용 가능.
+
+        css( ) 안에 하나의 속성값만 전달할 경우
+        css("border", "2px dashed #f00");
+
+        css( ) 안에 두개 이상의 속성값을 전달하거나 변수로 전달할 경우
+        css({"border":"2px dashed #f00", "background-color":"#ff0"});
+        css(style_2);
+
+        nextAll() 전체 형 요소 선택자
+        prevAll() 전체 동생 요소 선택자
+        siblings() 전체 형제 요소 선택 - 자기 자신은 빼고
+        prevUntil("범위 제한 요소 선택")
+        prverUntil("범위 제한 요소 선택")
+
+        parents() 전체 상위 요소 선택
+        parents("div") 상위 요소 중 div들만
+
+        closest("div") 현재 요소 중 가장 가까운 div속성을 가진 요소 선택
+    </script>
+```
 
 ---
 ## etc
