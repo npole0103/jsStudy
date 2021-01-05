@@ -380,6 +380,120 @@ html, head, body, title, meta, img, h1, 등등
     </script>
 ```
 
+**제이쿼리 선택 탐색자**
+``` html
+위치 탐색 선택자
+<script>
+    $("요소 선택:first") or $("요소 선택").first() 전체 <li>요소 중 첫번째 요소만 선택
+    $("요소 선택:last") or $("요소 선택").last() 전체 <li>요소 중 마지막 요소만 선택
+    $("요소 선택:odd") <li>요소 무리 중 짝수 번째 요소만 선택
+    $("요소 선택:even") <li>요소 무리 중 홀수 번째 요소만 선택
+    $("요소 선택:first-of-type") <li> 요소 무리 중 첫번째 요소만 선택
+    $("요소 선택:last-of-type") <li> 요소 무리 중 마지막 요소만 선택
+    $("요소 선택:nth-child(숫자)") <li> 요소 무리 중 <숫자> 번재 요소만 선택
+    $("요소 선택:nth-child(숫자n)") <li> 요소 무리 중 <숫자> 배수 번째에 있는 요소만 선택
+    $("요소 선택:nth-last-of-type(숫자)") <li> 요소 무리 중 마지막 위치로부터 두번째에 있는 요소만 선택
+    $("요소 선택:only-child") 부모 요소 내에 <li> 요소가 1개뿐인 <li> 요소만 선택
+    $("요소 선택:eq(index)") or $("요소 선택").eq(index) <li> 요소 중 인덱스 2가 참조하는 요소를 불러옴
+    $("요소 선택:gt(index)") 요소 중 인덱스 1보다 큰 인덱스가 참조하는 요소를 불러온다.
+    $("요소 선택:lt(index)") 요소 중 인덱스 1보다 작은 인덱스가 참조하는 요소를 불러온다.
+    $("요소 선택").slice(2) 요소 중 인덱스 2부터 참조하는 요소를 불러옵니다.
+</script>
+
+```
+
+``` html
+배열 관련 메소드 
+<script>
+
+    $("요소 선택").each(function)
+    배열에 저장된 문서 객체만큼 메서드가 반복 실행됩니다. 배열에 저장된 객체의 순서대로 하나씩 접근하여 객체를 선택하고 인덱스를 구합니다.
+
+    $.map() $.map(Aarry.function) 배열에 저장된 데이터 수만큼 메서드가 반복 실행됩니다. 함수에서 반환된 데이터는 새 배열에 순서대로 저장됩니다. 새로 저장된 배열 객체를 반환합니다.
+
+    $.grep() $grep(Aarry.function) 배열에 저장된 데이터 수만큼 메서드가 반복 실행됩니다. 반환값이 true인 경우에만 배열의 데이터가 인덱스 오름차순으로 새 배열에 저장되며 그 배열을 반환합니다.
+
+    **function(a, b)에서 a는 element, b는 index**
+
+    $.inArray() $.inArray(data, Array, start index) 배열 안에서 데이터를 찾습니다. 데이터를 찾으면 가장 맨 앞 데이터의 인덱스를 반환하고, 찾지 못하면 -1을 반환합니다. start index의 값을 지정하면 해당 위치부터 데이터를 찾습니다. 
+
+    $.isArray() $.isArray(object) 입력한 객체가 배열 객체라면 true를, 아니면 false를 반환합니다.
+
+    $.merhe() $.merge(Array1, Array2) 인자값으로 입력한 2개의 배열 객체를 하나로 그룹화합니다.
+
+    index() $("요소 선택").index("지정 요소 선택") 선택자로 요소를 먼저 선택합니다. 그런 다음 지정한 요소의 인덱스 정보를 가져옵니다.
+
+</script>
+```
+
+``` html
+속성 탐색 선택자
+<script>
+    $("요소 선택[속성]") $("li[title]") li 중 title속성이 포함된 요소만 선택.
+    
+    $("요소 선택[속성=값]") $("li[title='리스트']") li 중 title 속성값이 '리스트'인 요소만 선택.
+    
+    $("요소 선택[속성^=텍스트]") $("a[href^='http://']") href 속성값이 'http://'로 시작하는 요소만 선택. 
+    
+    $("요소 선택[속성$=텍스트]") $("a[href$='.com']") href 속성값이 '.com'으로 끝나는 요소만 선택.
+    
+    $("요소 선택[href*=텍스트]") $("a[href*='suheon']") href 속성값  'suheon'를 포함하는 요소만 선택.
+    
+    $("요소 선택:hidden") $("li:hidden") li 중 숨겨져 있는 요소만 선택.
+    
+    $("요소 선택:visible") $("li:visible") li 중 보이는 요소만 선택.
+    
+    $(".text") $(".text") input 중 type 속성값이 "text"인 요소만 선택.
+    
+    $(".selected") $(".selected") selected 속성이 적용된 요소만 선택.
+    
+    $(".checked") $(".checked") checked 속성이 적용된 요소만 선택.
+</script>
+
+```
+
+``` html
+콘텐츠 탐색 선택자
+<script>
+
+    $("요소 선택:contains(텍스트)") $("li:contains('내용2')") li 중 '내용2'라는 텍스트를 포함하는 요소만 선택.
+
+    $("요소 선택").contents() $("p").contents() 선택 요소중 가장 가까운 하위요소 선택.
+
+    $("요소 선택:has(요소명)") $("요소 선택").has(요소명) $("li:has('span')") $("li").has('span') li 요소 중 span을 포함하는 요소만 선택.
+
+    $("요소 선택:not(:제외요소)") $("요소 선택").not(:제외요소)
+    $("li:not(:first)") $("li") li 중 첫번째 요소만 제외하고 선택.
+
+    $(요소 선택).fillter(필터요소) $("li").fillter(".list2") li 중 calss 값이 "list2"인 요소만 선택. 
+
+    $(요소 선택).find(요소선택2) $("li").find("strong") li 요소의 하위 요소인 <strong> 만 선택. 
+
+    $("요소 선택1").closest("요소선택2") $("strong").closest("div") <strong>을 감싸는 상위 <div>중 가장가까운 상위 요소 선택.
+
+    $("요소 선택").탐색 선택자().end() $("li").children("a").end() 필터링이 실행되기 이전의 요소인 li가 선택.
+
+
+
+알아두면 유용한 메소드
+
+    is(".요소 상태") $(".txt1").is("visible") 선택한 요소가 보이면 true를 반복합니다. 
+    
+    $.noConflict() var 변수 = $.noConflict(); 변수("요소 선택")
+    $.noConflict() 함수를 이용하면 현재 제이쿼리에서 사용중인 $메서드 사용을 중단하고 새로 지정한 변수명 메서드를 사용합니다.
+    
+    
+    get() $("요소 선택").get(0).style.color="#f00"
+    선택자에 get(0)을 적용하면 자바스크립트 DOM 방식의 스타일을 사용할 수 있습니다.
+
+
+    $("요소 선택").is("[checked | selected | visible | hidden | animated}]")
+    -> checked | selected | visible | hidden | animated 상태면 true, 아니면 false을 반환합니다.
+
+</script>
+```
+
+
 ---
 ## etc
 
