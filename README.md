@@ -711,7 +711,7 @@ html, head, body, title, meta, img, h1, 등등
     키보드 
 
     이벤트
-    keyoress()	선택한 요소에서 키보드를 눌렀을 때 이벤트가 발생. 문자키를 제외한 키의 코드값 반환
+    keypress()	선택한 요소에서 키보드를 눌렀을 때 이벤트가 발생. 문자키를 제외한 키의 코드값 반환
     keydown()	선택한 요소에서 키보드를 눌렀을 때 이벤트 발생. 키보드의 모든 기의 코드값을 반환
     keyup()	선택한 요소에서 키보드에서 손을 떼었을 때 이벤트가 발생.
 
@@ -747,17 +747,57 @@ html, head, body, title, meta, img, h1, 등등
 </script>
 ```
 
-`$("이벤트 대상").trigger("이벤트 종류");` : 강제로 이벤트 발생시키기
+`$("이벤트 대상").trigger("이벤트 종류");` : 강제로 이벤트 발생시키기  
 `$("이벤트 대상").off("이벤트 종류");` : 이벤트 제거하기
 
-ready() 이벤트 메소드는 사용자가 사이트를 방문할 때 요청한 HTML 문서 객체의 로딩이 끝나면 이벤트를 발생시킴
+ready() 이벤트 메소드는 사용자가 사이트를 방문할 때 요청한 HTML 문서 객체의 로딩이 끝나면 이벤트를 발생시킴  
 `$(document).ready(function() { 자바스크립트 코드; });`
 `$(document).on("ready", function() { 자바스크립트 코드; });`
 
-load() 이벤트 메소드는 외부에 연동된(iframe, img, video)의 로딩이 끝나면 이벤트를 발생시킨다.
+load() 이벤트 메소드는 외부에 연동된(iframe, img, video)의 로딩이 끝나면 이벤트를 발생시킨다.  
 `$(document).load(function() { 자바스크립트 코드; });`
 `$(document).on("load", function() { 자바스크립트 코드; });`
 
+``` html
+이벤트 객체의 속성 종류
+<script>
+    마우스 이벤트
+    clientX 마우스 포인터의 X좌푯값 반환 (스크롤 이동거리 무시)
+    clientY 마우스 포인터의 Y좌푯값 반환 (스크롤 이동거리 무시)
+    pageX 스크롤 X축의 이동한 거리를 계산하여 마우스 포인터의 X 좌표값을 반환
+    pageY 스크롤 Y축의 이동한 거리를 계산하여 마우스 포인터의 Y 좌표값을 반환
+    screenX 화면 모니터를 기준으로 마우스 포인터의 X 좌표값을 반환
+    screenY 화면 모니터를 기준으로 마우스 포인터의 Y 좌표값을 반환
+    layerX position을 적용한 요소를 기준으로 마우스 포인터의 X 좌표값을 반환
+    layerY position을 적용한 요소를 기준으로 마우스 포인터의 Y 좌표값을 반환
+    button 마우스 버튼의 종류에 따라 값을 반환 (왼쪽:0, 휠:1, 오른쪽:2)
+    
+    키보드 이벤트
+    keyCode 키보드의 아스키 코드값을 반환
+    altKey 이벤트 발생 시 Alt 키가 눌렸으면 true를, 아니면 false를 반환
+    ctrlKey 이벤트 발생 시 Ctrl 키가 눌렸으면 true를, 아니면 false를 반환
+    shiftKey 이벤트 발생 시 Shift 키가 눌렸으면 true를, 아니면 false를 반환
+    
+    전체 이벤트
+    target 이벤트가 전파된 마지막 요소를 가리킵니다.
+    cancelBubble 이벤트 전파를 차단하는 속성, 기본값은 false이며, true로 설정하면 전파가 차단.
+    stopPropagation() 이벤트 전파를 차단
+    preventDefault() 기본 이벤트 차단. 예를 들어 <a> 에 클릭 이벤트를 적용하고 사용자가 이벤트를 발생시키면 기본 이벤트가 등록되어 있어 링크 주소로 이동하는데, 이런 기본 이벤트를 차단할 수 있습니다.
+</script>
+```
+
+``` html
+포커스 이벤트
+<script>
+    포커스 이벤트 : 키보드 탭(Tab) 키를 누를 때 생성됨. focus는 mouseover에 대응되며 blur는 mouseout에 대응됨.
+    focus() / blur() / focusin() / focusout() 이벤트 메서드
+    focus()	대상 요소로 포커스가 이동하면 이벤트를 발생.
+    blur()	포커스가 대상 요소에서 다른 요소로 이동하면 이벤트를 발생.
+    focusin()	대상 요소의 하위 요소 중 입력 요소로 포커스가 이동하면 이벤트를 발생.
+    focusout()	대상 요소의 하위 요소 중 입력 요소에서 외부 요소로 이동하면 이벤트 발생.
+</script>
+```
+`<form action="URL"></form>`에서 action 값은 form에 있는 데이터를 서버로 보낼 때 도착지점 URL을 명시함.
 
 ---
 ## etc
