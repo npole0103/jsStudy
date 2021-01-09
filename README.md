@@ -799,6 +799,106 @@ load() 이벤트 메소드는 외부에 연동된(iframe, img, video)의 로딩�
 ```
 `<form action="URL"></form>`에서 action 값은 form에 있는 데이터를 서버로 보낼 때 도착지점 URL을 명시함.
 
+var, let, const
+
+var는 function-scoped 단위로 hosting, let, const는 block-scoped 단위로 hosting 되어 있다.
+
+쉽게 말하자면 전자는 전역변수 후자는 지역 변수 같은 느낌?
+
+둘 다 함수 내에서 사용되었다면 소멸되지만 if문이나 for문 내에서 사용된 것이라면
+
+var는 전역 변수 단위 hosting이라 값이 살아 있는 반면 let과 hosting은 소멸된다.
+
+또한 let, const 두개의 공통점은 var와 다르게 변수 재선언 불가능이다.
+
+그리고 let과 const의 차이점은 변수의 immutable여부이다.
+
+let은 변수에 재할당이 가능하지만, const는 변수 재선언, 재할당 모두 불가능하다.
+
+**요약**
+var 재선언 가능 / 변수 재할당 가능
+
+let 재선언 불가 / 변수 재할당 가능
+
+const 재선언 불가 / 변수 재할당 불가
+
+---
+
+### Bootstrap
+
+[bootstrap 예시 소스 코드](bootstrap.html)
+
+웹 사이트나 웹 응용프로그램 제작을 위해 사용되는 무료 프레임워크
+
+기본적으로 반응형 웹을 지원해줌.
+
+우리가 자주 사용하는 UI를 전부 컴포넌트화 해서 제공함으로써 그냥 가져다 쓸 수 있음.
+
+현재 전 세계 개발자들이 가장 많이 사용함.
+
+bootstrap themes 검색하고 자신이 만들자고자하는 페이지 소스를 다운하고 그 소스를 활용하는 것이 현명.
+
+[레진 WAI-ARIA 목록](https://yongbeomkim.github.io/html/html-web-aria/)
+
+#### grid system
+12 grid System 구조. `class="com-md-4"` 를 3개 쓰면 합이 12라서 3개의 영역으로 나눠짐.  
+md는 medium의 약자. md 사이즈 이상일 경우 4개의 col을 차지해라. 라는 뜻  
+만약 화면 크기를 md 사이즈보다 작게하면 원래 사이즈로 돌아가라는 뜻.  
+sm은 small의 약자. lg는 large의 약자.
+
+### component
+Alerts : div 사용 / 메시지를 전달하기 위해 사용. primary, secondary, success 등 각 클래스 네임에 따라 색상이 달라짐.
+
+Badges : span 사용 / 알림의 갯수, 혹은 새로운 것이 등록되었을 때 New 알림
+
+Breadcrumb : nav / ol  li 사용 / 현재 경로를 표시할 때 사용 주로 사용.
+
+Buttons : button 사용 / 클래스 네임에 따라 색상 달라짐. outline, sizes, block 등등의 옵션이 있음.
+
+Cards : div 사용 / 제품 소개하는 화면에서 자주 사용.
+
+Carousel : div 사용 / 화면 최상단에 오른쪽 왼쪽으로 넘어가는 슬라이드 라벨
+
+Collapse : div, button 사용 / 버튼을 누르게 되면 숨겨진 컨텐츠를 표시함.
+
+Dropdowns : div 사용 / 버튼을 누르면 아래에 목록을 출력해줌.
+
+Forms : form, div 같이 사용 / 입력 폼 양식을 만들어 줌.
+
+input group : div 사용 / 입력 양식과 입력을 같이 띄울 때 사용.
+
+list group : ul 사용 / 리스트를 나타냄. active 속성을 부여하면 선택한 것처럼 나타냄. badge랑 같이 쓸 수도 있음.
+
+Modal : button 사용 / 특정 버튼 누르면 팝업창 뜨는 것을 modal이라 함. 자주 사용 됨. backdrop 옵션을 주게 되면 다른 부분을 클릭해도 팝업창이 닫히지 않음.
+
+Navs : ul, li 사용 / 메뉴나 탭을 만들 때 사용함. 
+
+Navbar : nav 사용 / 실제 메뉴바와 가장 유사한 형태
+
+Pagination : nav 사용 / 게시판 하단에 앞 페이지로 가기 다음 페이지로 가기 등등
+
+Popover : button 사용 / 특정 버튼에 대해 부가적인 설명을 하고 싶을 때 popover 사용. 상세하게 설명해줄 때 ex) 물음표 버튼을 누르면 그 기능에 대한 설명이 나옴.
+
+Progress : div 사용 / 진행도 표시할 때 사용.
+
+Scrollspy : nav 사용 / nav 내부에서 스크롤 되게 만들 때 사용함.
+
+Spinners : div 사용 / progress와 유사함. 로딩이나 진행중임을 나타내는 스피너.
+
+Toasts : div 사용 / 알람 같은 기능. ex) 15분전에 어떤 작업에 변경이 있었다. 라는 문구를 띄워줌.
+
+Tooltips : button 사용 / 버튼 위 에다가 가져다 놓으면 부가적으로 설명해줌. popover와 유사하지만 클릭의 유무에 그 차이가 있음.
+
+#### Utilities
+
+Colors : 모든 요소에 적용 가능 / 글자나 배경 색상 변경 시 사용
+
+Display : 컨텐츠가 화면에 보이는지에 대한 유무를 컨트롤 함. 어떤 사이즈에선 보이고 어떤 사이즈에선 안 보이게 하는 것 가능. 프린트 할 때 원하지 않는 것은 숨길 수 있다.
+
+Interactions : 클릭 시 1. 복사하기 쉽게 끔 전체 선택 2. 기본형 3. 선택 불가능 하게 로 설정할 수 있음.
+
+Text : 텍스트 관련 기능들이 전부 들어 있음. aligned, wrapping, 텍스트 길 경우 `..`으로 표시, word-break, text-transform 대문자 소문자, bold 기능 등.
+
 ---
 ## etc
 
