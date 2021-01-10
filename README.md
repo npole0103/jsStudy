@@ -840,6 +840,28 @@ bootstrap themes 검색하고 자신이 만들자고자하는 페이지 소스�
 
 [레진 WAI-ARIA 목록](https://yongbeomkim.github.io/html/html-web-aria/)
 
+[템플릿 판매 사이트 wrapbootstrap](https://wrapbootstrap.com)
+
+[테마포레스트 themeforest](https://themeforest.net)
+
+처음부터 비효율적으로 전부 만들기 보단 프로젝트 진행 시 각각에 필요한 테마를 찾아서 적용하는 것도 능력.
+
+처음부터 전부 만드는 게 무의미해진 시대임. 단점은 모든 사이트마다 전부 비슷비슷한 템플릿. 모든 사이트 UI가 상향 평준화 되어버림. 장점은 웹퍼블리셔 없이 아주 빠르게 웹사이트를 높은 수준으로 제작할 수 있다.
+
+템플릿을 보고 분석하는 것만으로도 자신이 간단한 웹사이트 제작시 어떻게 설계해야할지 실력을 향상시킬 수 있음.
+
+부트스트랩 템플릿 다운 후 /assets 폴더에 css, img, js, plugin이 존재함.
+
+app.min.css bootstrap을 재정의해서 사용함
+
+head 상단에는 bootstrap + plugin 관련 css 정의 / body 맨 하단에는 bootstrap + plugin 관련 js 정의
+
+body 하단에 js를 정의하는 이유는 html이 로딩이 끝난 후에 js문법 검사를 해야 사용자 체감상 좀 더 빠르게 느껴지기 때문.
+
+Assan-kit 구매 추천 - $11 다양한 종류의 템플릿 존재
+
+**테마를 다운 받아서 분석해보고 간단한 웹페이지를 만들어 보는 것이 실력 향상에 있어서 가장 중요함**
+
 #### grid system
 12 grid System 구조. `class="com-md-4"` 를 3개 쓰면 합이 12라서 3개의 영역으로 나눠짐.  
 md는 medium의 약자. md 사이즈 이상일 경우 4개의 col을 차지해라. 라는 뜻  
@@ -898,6 +920,13 @@ Display : 컨텐츠가 화면에 보이는지에 대한 유무를 컨트롤 함.
 Interactions : 클릭 시 1. 복사하기 쉽게 끔 전체 선택 2. 기본형 3. 선택 불가능 하게 로 설정할 수 있음.
 
 Text : 텍스트 관련 기능들이 전부 들어 있음. aligned, wrapping, 텍스트 길 경우 `..`으로 표시, word-break, text-transform 대문자 소문자, bold 기능 등.
+
+
+
+
+
+
+
 
 ---
 ## etc
