@@ -921,11 +921,47 @@ Interactions : 클릭 시 1. 복사하기 쉽게 끔 전체 선택 2. 기본형 
 
 Text : 텍스트 관련 기능들이 전부 들어 있음. aligned, wrapping, 텍스트 길 경우 `..`으로 표시, word-break, text-transform 대문자 소문자, bold 기능 등.
 
+## fetch
+URL
+GET : query / POST : body 방식
+BODY 
 
+GET 방식
+``` html
+    <script>
+        // 동기 처리
+        let response = fetch('https://reqres.in/api/users?page=2').then(function(res) {
+            return res.json()
+        }).then(function(res) {
+            console.log(res)
 
+            if (res.total == 12) {
+                document.write(res.data[0].email)
+            } else {
+                document.write("False!")
+            }
+        })
+        console.log(response)
+    </script>
+```
 
+POST 방식
+``` html
+<script>
+    var url = 'https://example.com/profile';
+    var data = {username: 'example'};
 
-
+    fetch(url, {
+      method: 'POST', // or 'PUT'
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers:{
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+    .then(response => console.log('Success:', JSON.stringify(response)))
+    .catch(error => console.error('Error:', error));
+</script>
+```
 
 
 ---
